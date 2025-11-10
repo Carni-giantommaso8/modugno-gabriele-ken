@@ -1,18 +1,18 @@
-import { Component , Input} from '@angular/core';
+import { Component } from '@angular/core';
+import { Album } from '../album/album';
+
 
 @Component({
   selector: 'app-catalogo',
-  imports: [],
+  imports: [Album],
   templateUrl: './catalogo.html',
   styleUrl: './catalogo.css',
 })
 export class Catalogo {
- @Input() name!: string;
-
-  constructor() {
-     
+ names: string[];  
+  constructor() { 
+     this.names = ['album rock', 'album pop', 'album jazz', 'album phunk',"album non lo so", "album mio", "album rovazzi","album ken","album cinquantacent"]; 
   }
-
-  ngOnInit() {}
-
+  ngOnInit() {
+  }
 }

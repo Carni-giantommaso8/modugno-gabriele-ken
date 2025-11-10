@@ -1,17 +1,17 @@
-import { Component } from '@angular/core';
-import { Catalogo } from '../catalogo/catalogo';
+import { Component, Input } from '@angular/core';
+
 
 @Component({
   selector: 'app-album',
-  imports: [Catalogo],
+  imports: [],
   templateUrl: './album.html',
   styleUrl: './album.css',
 })
-export class album {
- names: string[];  
-  constructor() { 
-     this.names = ['album rock', 'album pop', 'album jazz', 'album phunk',"album non lo so", "album mio", "album rovazzi","album ken","album cinquantacent"]; 
+export class Album  {
+  @Input() name!: string;
+  ciao: string[];
+  constructor() {
+    this.ciao = ["Traccia 1", "Traccia 2", "Traccia 3", "Traccia 4", "Traccia 5"];
   }
-  ngOnInit() {
-  }
+  ngOnInit() {}
 }

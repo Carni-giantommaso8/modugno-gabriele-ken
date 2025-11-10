@@ -1,1 +1,6 @@
-<p>{{name}}</p>
+<ul>
+     @for (name of names;track name) {
+       <li><app-album [name]="name"></app-album>
+       </li>
+      }
+</ul>
