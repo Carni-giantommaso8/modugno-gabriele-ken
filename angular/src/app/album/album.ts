@@ -1,11 +1,13 @@
 import { Component, Input } from '@angular/core';
+import { CommonModule } from '@angular/common';
 
 
 @Component({
   selector: 'app-album',
-  imports: [],
+  standalone: true,
+  imports: [CommonModule],
   templateUrl: './album.html',
-  styleUrl: './album.css',
+  styleUrls: ['./album.css'],
 })
 export class Album  {
   @Input() name!: string;
